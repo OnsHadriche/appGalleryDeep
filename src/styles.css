@@ -35,7 +35,8 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
-  background-color: #000;
+  /* background-color: #ffffff; */
+  background-color: #000000;
 }
 
 a {
@@ -286,7 +287,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 30px 0;
-  background-color: #000;
+  background-color: #ffffff;
 }
 
 .header .logo {
@@ -298,11 +299,11 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo h1 {
-  font-size: 32px;
+.header .logo h4 {
+  font-size: 20px;
   margin: 0;
-  font-weight: 400;
-  color: #fff;
+  font-weight: 800;
+  color: #720931;
   font-family: var(--font-secondary);
 }
 
@@ -314,26 +315,20 @@ h6 {
 
 @media (max-width: 575px) {
   .header .logo h1 {
-    font-size: 26px;
+    font-size: 18px;
   }
 
   .header .logo i {
-    font-size: 24px;
+    font-size: 14px;
   }
 }
 
 .header .header-social-links {
   padding-right: 15px;
+  color: #000;
 }
 
-.header .header-social-links a {
-  color: rgba(255, 255, 255, 0.5);
-  padding-left: 15px;
-  display: inline-block;
-  line-height: 0px;
-  transition: 0.3s;
-  font-size: 16px;
-}
+
 
 .header .header-social-links a:hover {
   color: #fff;
@@ -376,7 +371,7 @@ h6 {
     letter-spacing: 1px;
     font-size: 13px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(15, 15, 15, 0.993);
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -392,7 +387,7 @@ h6 {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: #181717;
   }
 
   .navbar .dropdown ul {
@@ -505,7 +500,7 @@ h6 {
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(26, 24, 24, 0.5);
     letter-spacing: 1px;
     white-space: nowrap;
     transition: 0.3s;
@@ -522,7 +517,7 @@ h6 {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: #201e1e;
   }
 
   .navbar .dropdown ul,
@@ -541,7 +536,7 @@ h6 {
   }
 
   .mobile-nav-show {
-    color: #fff;
+    color: #1d1b1b;
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
@@ -708,7 +703,7 @@ h6 {
 # Pricing Section
 --------------------------------------------------------------*/
 .gallery {
-  margin-top: 40px;
+  margin-top: 150px;
 }
 
 .gallery .gallery-item {
@@ -1263,3 +1258,6 @@ h6 {
 .footer .credits a {
   color: var(--color-primary);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
