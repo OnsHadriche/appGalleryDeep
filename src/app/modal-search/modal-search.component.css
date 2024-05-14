@@ -62,3 +62,8 @@ figcaption{
   text-align: center;
   color: #2a292a;
 }
+.svgIA svg{
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}

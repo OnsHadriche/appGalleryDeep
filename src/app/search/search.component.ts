@@ -15,7 +15,7 @@ export class SearchComponent  implements OnInit{
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(ModalSearchComponent, {
-      width: '450px',
+      width: '600px',
 
       enterAnimationDuration,
       exitAnimationDuration,
