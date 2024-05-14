@@ -1,1 +1,13 @@
-<p>modal-search works!</p>
+<h1 mat-dialog-title>Search by IA</h1>
+<div mat-dialog-content>
+  <mat-tab-group>
+    <mat-tab label="Search by image" >
+      <app-file-upload/>
+    </mat-tab>
+    <mat-tab label="Generate image"> Content 2 </mat-tab>
+  </mat-tab-group>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>No</button>
+  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+</div>

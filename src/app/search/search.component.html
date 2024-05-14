@@ -1,15 +1,11 @@
 <form class="example-form">
   <div class="container-search">
-    <span>
+    <span (click)="openDialog('1000ms', '1000ms')">
       <mat-icon
-      class="search-icon"
-      aria-hidden="false"
-      aria-label="Example home icon"
-      >search</mat-icon
-      >
-
+        class="search-icon"
+        aria-label="Example search icon"
+      >search</mat-icon>
     </span>
-    <input type="search" placeholder="Search" class="search-input" />
+    <input type="search" placeholder="Search" class="search-input" (click)="openDialog('1000ms', '1000ms')" />
   </div>
 </form>
-
