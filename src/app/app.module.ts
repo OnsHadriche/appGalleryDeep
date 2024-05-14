@@ -11,6 +11,12 @@ import { SearchComponent } from './search/search.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { ModalSearchComponent } from './modal-search/modal-search.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatTabsModule} from '@angular/material/tabs';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { UploadWidgetModule } from "@bytescale/upload-widget-angular";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +24,8 @@ import { ModalSearchComponent } from './modal-search/modal-search.component';
     FooterComponent,
     HomeComponent,
     SearchComponent,
-    ModalSearchComponent
+    ModalSearchComponent,
+    FileUploadComponent
 
   ],
   imports: [
@@ -27,7 +34,12 @@ import { ModalSearchComponent } from './modal-search/modal-search.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    MatTabsModule,
+    MatProgressBarModule,
+    UploadWidgetModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
