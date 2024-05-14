@@ -16,6 +16,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { UploadWidgetModule } from "@bytescale/upload-widget-angular";
+import { GeneratorImageComponent } from './generator-image/generator-image.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UploadWidgetModule } from "@bytescale/upload-widget-angular";
     HomeComponent,
     SearchComponent,
     ModalSearchComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    GeneratorImageComponent
 
   ],
   imports: [
