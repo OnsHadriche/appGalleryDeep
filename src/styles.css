@@ -354,6 +354,7 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: center;
   }
 
   .navbar li {
@@ -371,7 +372,7 @@ h6 {
     letter-spacing: 1px;
     font-size: 13px;
     font-weight: 400;
-    color: rgba(15, 15, 15, 0.993);
+    color: rgba(8, 8, 8, 0.993);
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -423,7 +424,7 @@ h6 {
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: #fff;
+    color: #0f0f0f;
   }
 
   .navbar .dropdown:hover>ul {
@@ -1232,6 +1233,8 @@ h6 {
     font-size: 32px;
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # Footer
