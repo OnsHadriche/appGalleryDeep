@@ -1,0 +1,21 @@
+<div class="container">
+  <upload-dropzone
+    [options]="options"
+    [onUpdate]="onUpdate"
+    [width]="width"
+    [height]="height"
+  >
+
+  </upload-dropzone>
+  <div class="example-small-box mat-elevation-z4">
+    <input
+      type="file"
+      id="file"
+      accept="image/*"
+      onchange="onFileSelected($events)"
+    />
+    <label for="file">
+      <mat-icon>add_photo_alternate</mat-icon> upload your image</label
+    >
+  </div>
+</div>
