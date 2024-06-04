@@ -1,27 +1,53 @@
-import { Component } from '@angular/core';
-import { UploadWidgetConfig, UploadWidgetResult, UploadWidgetOnUpdateEvent } from "@bytescale/upload-widget";
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient, HttpEventType } from '@angular/common/http';
+import { Subscription } from 'rxjs';
+import { finalize } from 'rxjs/operators';
+import { HomeServiceService } from '../Services/home-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-file-upload',
   templateUrl: './file-upload.component.html',
   styleUrls: ['./file-upload.component.css']
 })
-export class FileUploadComponent {
-  options: UploadWidgetConfig = {
-    apiKey: "free", // Get API key: https://www.bytescale.com/get-started
-    maxFileCount: 10
-  };
-  // 'onUpdate' vs 'onComplete' attrs on 'upload-dropzone':
-  // - Dropzones are non-terminal by default (they don't have an end
-  //   state), so by default we use 'onUpdate' instead of 'onComplete'.
-  // - To create a terminal dropzone, use the 'onComplete' attribute
-  //   instead and add the 'showFinishButton: true' option.
-  onUpdate = ({ uploadedFiles, pendingFiles, failedFiles }: UploadWidgetOnUpdateEvent) => {
-    const uploadedFileUrls = uploadedFiles.map(x => x.fileUrl).join("\n");
-    console.log(uploadedFileUrls);
-  };
-  width = "600px";
-  height = "375px";
+export class FileUploadComponent implements OnInit {
+
+  @Input() requiredFileType: string = '';
+
+  fileName: string = '';
+  uploadProgress: number | null = null;
+  uploadSub: Subscription | null = null;
+  file: File | null = null;
+
+  constructor(private http: HttpClient,private HS:HomeServiceService,private router:Router) {}
+
+  ngOnInit(): void {}
+
+  onFileSelected(event: any): void {
+    const file: File = event.target.files[0];
+
+    if (file) {
+      this.file = file;
+      this.fileName = file.name;
+      const formData = new FormData();
+      formData.append("thumbnail", file);
+
+      const upload$ = this.http.post("/api/thumbnail-upload", formData, {
+        reportProgress: true,
+        observe: 'events'
+      }).pipe(
+        finalize(() => {})
+      )
+
+    }
+  }
+  search(): void {
+    if (this.file) {
+      this.HS.predict(this.file).subscribe(() => {
+        this.router.navigate(["/test"]);
+      });
+    } else {
+      console.error("No file selected!");
+    }
+  }
 }
-
-

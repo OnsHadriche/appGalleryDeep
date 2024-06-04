@@ -1,0 +1,51 @@
+//component file upload
+<!-- <upload-dropzone
+    [options]="options"
+    [width]="width"
+    [height]="height"
+    (onUpdate)="onUpdate($event)"
+  >
+
+  </upload-dropzone> -->
+  <!-- <button mat-button
+      uploadButton
+      [uploadOptions]="options"
+      [uploadComplete]="onComplete"
+      class="ms-5"
+    >
+      Upload a file...
+    </button>
+    <button mat-button color="primary" (click)="search()">Search</button> -->
+//code logic
+
+ // uploadedFileUrl: string | undefined = undefined;
+  // fileImage!: File;
+
+  // constructor(private homeService: HomeServiceService, private router: Router) { }
+
+  // options: UploadWidgetConfig = {
+  //   apiKey: "free",
+  //   maxFileCount: 10
+  // };
+
+  // onComplete = (files: UploadWidgetResult[]) => {
+  //     this.uploadedFileUrl = files[0]?.fileUrl;
+
+
+
+  // };
+
+  // search(): void {
+  //   const blob = new Blob([this.uploadedFileUrl as BlobPart], { type: 'image/*' });
+  //   this.fileImage = new File([blob],URL.createObjectURL(blob));
+  //   this.homeService.predict(this.fileImage).subscribe(response => {
+  //       console.log(response);
+  //       this.router.navigate(['/test']);
+  //     }, error => {
+  //       console.error('Error during prediction:', error);
+  //     });
+
+
+
+
+  // }

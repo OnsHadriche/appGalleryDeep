@@ -1,21 +1,28 @@
 <div class="container">
-  <upload-dropzone
-    [options]="options"
-    [onUpdate]="onUpdate"
-    [width]="width"
-    [height]="height"
-  >
+  <!-- File Input -->
+  <input
+    type="file"
+    class="file-input"
+    [accept]="requiredFileType"
+    (change)="onFileSelected($event)"
+    #fileUpload
+    multiple
+  />
 
-  </upload-dropzone>
-  <!-- <div class="example-small-box mat-elevation-z4">
-    <input
-      type="file"
-      id="file"
-      accept="image/*"
-      onchange="onFileSelected($events)"
-    />
-    <label for="file">
-      <mat-icon>add_photo_alternate</mat-icon> upload your image</label
+  <!-- File Upload Section -->
+  <div class="file-upload">
+    <!-- Display file name or a default message -->
+    {{ fileName || "No file uploaded yet." }}
+
+    <!-- Upload Button to trigger file input click -->
+    <button
+      mat-mini-fab
+      color="primary"
+      class="upload-btn"
+      (click)="fileUpload.click()"
     >
-  </div> -->
+      <mat-icon>attach_file</mat-icon>
+    </button>
+  </div>
+  <button mat-button color="primary" (click)="search()">Search</button>
 </div>

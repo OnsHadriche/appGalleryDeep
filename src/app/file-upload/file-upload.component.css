@@ -62,3 +62,6 @@ figcaption{
   text-align: center;
   color: #2a292a;
 }
+.file-input {
+  display: none;
+}
