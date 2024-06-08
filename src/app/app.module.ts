@@ -25,6 +25,7 @@ import { ImageFocusBoxComponent } from './image-focus-box/image-focus-box.compon
 import { UploadWidgetModule } from "@bytescale/upload-widget-angular";
 import { TestComponent } from './test/test.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ResultComponent } from './result/result.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     GeneratorImageComponent,
 
     ImageFocusBoxComponent,
-     TestComponent
+     TestComponent,
+     ResultComponent
 
   ],
   imports: [
